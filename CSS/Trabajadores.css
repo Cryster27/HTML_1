@@ -63,18 +63,22 @@ button:hover {
     color: #888;
 }
 
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
 
-
-
-
-
-    video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+        width: 90%;
     }
-
+    button {
+        font-size: 14px;
+    }
+}
