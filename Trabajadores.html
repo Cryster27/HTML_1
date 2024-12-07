@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajadores</title>
+    <link rel="stylesheet" href="CSS/Trabajadores.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="ICO/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="ICO/favicon-16x16.png">
+</head>
+<body>
+    <!-- Cristopher Cabrera Eguia -->
+    <a href="index.html" target="_blank">
+        <button class="btn-animated">Menú principal</button>
+    </a>
+    <form action="#" method="post">
+        <h2>¿Te interesa trabajar en construccion?</h2>
+
+        <!-- nombre  -->
+        <label for="nombre">nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="ingresa tu nombre completo" required>
+
+        <!-- correo  -->
+        <label for="email">correo electronico:</label>
+        <input type="email" id="email" name="email" placeholder="ingresa tu correo electronico" required>
+
+        <!-- celularr-->
+        <label for="telefono">numero de telefono:</label>
+        <input type="number" id="telefono" name="telefono" placeholder="ingresa tu numero de telefono" required>
+
+        <!-- experiencia -->
+        <label>¿has trabajado antes en construccion?</label>
+        <input type="radio" id="si" name="experiencia" value="si" required>
+        <label for="si">sí</label>
+        <input type="radio" id="no" name="experiencia" value="no" required>
+        <label for="no">no</label>
+
+        <!-- detalles de experienci -->
+        <label for="detalles-experiencia">describe tu experiencia previa en construccion (solo si has trabajado antes):</label>
+        <textarea id="detalles-experiencia" name="detalles-experiencia" rows="4" placeholder="escribe brevemente tu experiencia"></textarea>
+
+        <!-- tipo de construccion -->
+        <label for="tipo-construccion">¿en que tipo de construccion te gustaria trabajar?</label>
+        <select id="tipo-construccion" name="tipo-construccion" required>
+            <option value="">selecciona una opcion</option>
+            <option value="residencial">construccion residencial</option>
+            <option value="comercial">construccion comercial</option>
+            <option value="industrial">construccion industrial</option>
+            <option value="obra-publica">obra publica</option>
+        </select>
+
+        <!-- disponibilidad -->
+        <label for="disponibilidad">disponibilidad para comenzar:</label>
+        <input type="date" id="disponibilidad" name="disponibilidad" required>
+
+
+        <label for="comentarios">comentarios adicionales (opcional):</label>
+        <textarea id="comentarios" name="comentarios" rows="4" placeholder="añade cualquier otro detalle que consideres relevante"></textarea>
+
+
+        <button type="submit">enviar solicitud</button>
+    </form>
+
+</body>
+</html>

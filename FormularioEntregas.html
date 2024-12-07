@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de entrega a domicilio</title>
+     <link rel="icon" type="image/png" sizes="32x32" href="ICO/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="ICO/favicon-16x16.png">
+    <link rel="stylesheet" href="CSS/FormularioEntregas.css">
+</head>
+<body>
+    <!-- Cristopher Cabrera Eguia -->
+    <a href="index.html">
+        <button class="btn-animated">Menú principal</button>
+</a>
+    
+    
+    <div class="container">
+        <h1>Formulario de entrega a domicilio</h1>
+        
+        <!-- video de fondo -->
+	<video id="video-background" autoplay muted loop>
+		<source src="MP4/carrito.mp4" type="video/mp4">
+		error
+	</video>
+        <form id="delivery-form">
+            <!-- informacion personal -->
+            <label for="name">Nombre completo</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Numero de telefono</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="address">Direccion de entrega</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="branch">Sucursal</label>
+            <select id="branch" name="branch">
+                <option value="arequipa">Sucursal Arequipa</option>
+                <option value="cusco">Sucursal Cusco</option>
+                <option value="lima">Sucursal Lima</option>
+                <option value="trujillo">Sucursal Trujillo</option>
+                <option value="piura">Sucursal Piura</option>
+                <option value="chiclayo">Sucursal Chiclayo</option>
+            </select>
+
+            <!-- metodo de envio -->
+            <label for="shipping-method">Metodo de envio</label>
+            <select id="shipping-method" name="shipping-method">
+                <option value="car">Carro</option>
+                <option value="motorcycle">Moto</option>
+                <option value="combi">Combi</option>
+            </select>
+
+            <label for="shipping-type">Tipo de envio</label>
+            <select id="shipping-type" name="shipping-type">
+                <option value="premium">Premium</option>
+                <option value="semi-premium">Semi Premium</option>
+                <option value="combi">Combi</option>
+            </select>
+
+            <!-- informacion de tarjeta o verificacion de identidad -->
+            <label for="card">Numero de tarjeta</label>
+            <input type="text" id="card" name="card" placeholder="Si no tienes tarjeta, dejalo vacio" oninput="checkCard()">
+            <p class="note">Si no tienes tarjeta, por favor verifica tu identidad.</p>
+
+            <!-- verificacion de identidad -->
+            <div id="identity-check" class="hidden">
+                <label for="id-number">Numero de documento de identidad</label>
+                <input type="text" id="id-number" name="id-number" placeholder="Ingresa tu DNI o documento">
+                
+                <label for="email">Correo electronico</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <!-- enviar formulario -->
+            <button type="submit" id="submit-btn" disabled>Enviar pedido</button>
+        </form>
+
+        <!-- cuadro explicativo sobre el pago -->
+        <div class="explanation-box">
+            <h2>Compra - Entrega a domicilio (sin tarjeta/pago efectivo - contra entrega)</h2>
+            <p>
+                Si no cuentas con tarjeta de credito, no te preocupes :). 
+                Puedes realizarr tu compra de forma segura a traves de nuestro servicio de pago contra entrega.
+                Al completar el formulario, te pediremos verificar tu identidad con tu documento personal 
+                - DNI. Una vez verificado, podras generar un codigo que te permitira realizar compras 
+                en linea sin necesidad de tarjeta. 
+                El pasgo se efectuara al momento de la entrega, en efectivo al repartidor.
+            </p>
+        </div>
+
+        <div id="confirmation-message" class="hidden">
+            <h2>Gracias por preferirnos</h2>
+            <p>En poco tiempo, nos pondremos en contacto contigo para confirmar tu entrega.</p>
+        </div>
+    </div>
+
+    <script>
+        function checkCard() {
+            var cardInput = document.getElementById("card").value;
+            var identityCheck = document.getElementById("identity-check");
+            var submitBtn = document.getElementById("submit-btn");
+
+            if (cardInput.trim() === "") {
+                identityCheck.classList.remove("hidden");
+                submitBtn.disabled = false;
+            } else {
+                identityCheck.classList.add("hidden");
+                submitBtn.disabled = false;
+            }
+        }
+
+        // cuando el formulario se envie
+        document.getElementById("delivery-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // evita que el formulario se envie de la manera tradicional
+            var confirmationMessage = document.getElementById("confirmation-message");
+            confirmationMessage.classList.remove("hidden");
+        });
+    </script>
+</body>
+</html>

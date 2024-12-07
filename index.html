@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="construcciones - venta de materiales de construccion y servicios de asesoría tecnica e instalacion.">
+    <meta name="keywords" content="construcción, materiales, asesoría técnica, instalación, productos, ofertas">
+    <meta name="author" content="construcciones">
+    
+    <!-- bostrap boton -->
+    
+    <title>CONSTRUYE UTP</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="ICO/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="ICO/favicon-16x16.png">
+</head>
+
+<body>
+    
+    <div class="video-container">
+    <video autoplay muted loop style="width: 100%; display: block;">
+        <source src="MP4/TimeLapse.mp4" type="video/mp4">
+        El navegador no aguanta el video
+    </video>
+    <h1 class="titulo-video">CONSTRUYE UTP</h1>
+    </div>
+    
+    <!-- Cristopher Cabrera Eguia -->
+    
+    <!--barra de navegacion -->
+    <header>
+    <img src="GIF/cabecera.gif" alt="Cabecera" class="cabecera-img">
+    <div id="contador">Cargando...</div>
+
+    <script>
+        const deadline = new Date("2024-12-31T23:59:59").getTime();
+
+        function Contador() {
+            const now = new Date().getTime();
+            const timeLeft = deadline - now;
+
+            if (timeLeft > 0) {
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                document.getElementById("contador").innerHTML = 
+                    `${days}d : ${hours}h : ${minutes}m : ${seconds}s`;
+            } else {
+                document.getElementById("contador").innerHTML = "¡Oferta finalizada!";
+                clearInterval(interval);
+            }
+        }
+
+        const interval = setInterval(Contador, 1000);
+        Contador();
+    </script>
+
+    <nav>
+        <ul>
+            <li><a href="#inicio">OFERTAS</a></li>
+            <li><a href="#servicios">SERVICIOS</a></li>
+            <li><a href="#ubicaciones">UBICACIONES</a></li>
+        </ul>
+        <img src="IMAGENES/logo.png" alt="Logo" class="logo">
+    </nav>
+    </header>
+
+
+    <!--  productos -->
+    <section id="inicio">
+        <h3>Ofertas especiales</h3>
+        <p>¡Descuentos del 30% en herramientas de construccion!</p>
+        <div class="productos">
+            <!-- productos destacados -->
+            <div class="producto">
+                <img src="IMAGENES/cemento_resistente.png" alt="cemento ultra resistente">
+                <h4>Cemento ultra resistente</h4>
+                <p>Precio especial: S/ 30.00</p>
+            </div>
+            <div class="producto">
+                <img src="IMAGENES/ladrillos.png" alt="ladrillos eco">
+                <h4>Ladrillos ecoamigable</h4>
+                <p>Precio especial: S/ 1.50</p>
+            </div>
+            <div class="producto">
+                <img src="IMAGENES/pintura.png" alt="pintura acrilica">
+                <h4>Pintura acrilica</h4>
+                <p>Precio especial: S/ 45.00</p>
+            </div>
+            <div class="producto">
+                <img src="IMAGENES/ladrilloverde.png" alt="ladrillo ecologico">
+                <h4>Ladrillo hoja</h4>
+                <p>Precio especial: S/ 10.00</p>
+            </div>
+            <div class="producto">
+                <img src="IMAGENES/martillochapador.png" alt="martillo chapador">
+                <h4>Martillo chapador</h4>
+                <p>Precio especial: S/ 20.00</p>
+            </div>
+            <div class="producto">
+                <img src="IMAGENES/ropaconstruccion.png" alt="ropa de construccion">
+                <h4>Ropa de seguridad</h4>
+                <p>Precio especial: S/ 50.00</p>
+            </div>
+        </div>
+        <div class="productos">
+            <!-- productos destacados -->
+            <div class="producto">
+                <img src="IMAGENES/1.png" alt="cemento ultra resistente">
+                <h4>Casco Laquitu</h4>
+                <p>Precio especial: S/ 45.00</p>
+            </div>
+            <div class="producto">
+                <img src="IMAGENES/2.png" alt="ladrillos eco">
+                <h4>Martillo Stanley</h4>
+                <p>Precio especial: S/ 21</p>
+            </div>
+            <div class="producto">
+                <img src="IMAGENES/3.png" alt="pintura acrilica">
+                <h4>Guante Soltrak</h4>
+                <p>Precio especial: S/ 28.00</p>
+            </div>
+            <div class="producto">
+                <img src="IMAGENES4.png" alt="zapatilla wena">
+                <h4>Zapatilla Miroka Acerada</h4>
+                <p>Precio especial: S/ 72.00</p>
+            </div>
+            <div class="producto">
+                <img src="IMAGENES/5.png" alt="Arnes de seguirdad">
+                <h4>Arnes de seguridad</h4>
+                <p>Precio especial: S/ 120.00</p>
+            </div>
+            <div class="producto">
+                <img src="IMAGENES/6.png" alt="cinta seguridad">
+                <h4>Cinta de seguridad</h4>
+                <p>Precio especial: S/ 15.00</p>
+            </div>
+        </div>
+        <br/>
+        <!-- marquee -->
+        <marquee behavior="scroll" direction="right">
+            ¡Compra ahora y ahorra más! 🛒                                                                               Las mejores ofertas te esperan, ¡no las dejes pasar! 💸                                                                            Tus productos favoritos, a un clic de distancia 🖱️                                                                            Lo que necesitas, cuando lo necesitas, ¡al mejor precio! 🏷️
+        </marquee>
+        
+        <div class="container">
+            <a href="WEB_TIENDA/Tienda.html" target="_blank" class="button btn-animated">Expandir tienda</a>
+        </div>
+
+    </section>
+
+    <!-- servicios adicionales -->
+    <section id="servicios">
+        <br/>
+        <h3 algin="center">Servicios adicionales</h3>
+        <ul>
+            <li><a href="FormularioEntregas.html" target="_blank">Compra - Entrega a Domicilio (Sin tarjeta/Pago Efectivo - Contra Entrega)</a></li>
+            <li><a href="Contratar.html" target="_blank">Instalación profesional</a></li>
+            <li><a href="GanadorDeOro.html" target="_blank">Ganador del martillo de ORO</a></li>
+            <li><a href="Trabajadores.html" target="_blank">¿Quieres trabajar en construccion?</a></li>
+            <li><a href="Juego.html" target="_blank">Minijuegos</a></li>
+        </ul>
+    </section>
+
+    
+
+    <!--mapa -->
+    <section id="ubicaciones">
+        <br/>
+    <h3>Ubicaciones</h3>
+    <div id="mapa-contenedor">
+        <!-- Agregamos el id "mapa" al iframe -->
+        <iframe id="mapa" 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3827.3155032673053!2d-71.54367491429032!3d-16.408795198827114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2spe!4v1726252457563!5m2!1ses!2spe" 
+                width="100%" 
+                height="450" 
+                frameborder="0" 
+                allowfullscreen="" 
+                loading="lazy">
+        </iframe>
+    </div>
+
+    <div id="botones-ubicaciones" align="center">
+        <button onclick="cambiarUbicacion('Arequipa')">Sucursal Arequipa</button>
+        <button onclick="cambiarUbicacion('Cusco')">Sucursal Cusco</button>
+        <button onclick="cambiarUbicacion('Lima')">Sucursal Lima</button>
+        <button onclick="cambiarUbicacion('Trujillo')">Sucursal Trujillo</button>
+        <button onclick="cambiarUbicacion('Piura')">Sucursal Piura</button>
+        <button onclick="cambiarUbicacion('Chiclayo')">Sucursal Chiclayo</button>
+    </div>
+
+    <script>
+        function cambiarUbicacion(ubicacion) {
+            const mapa = document.getElementById('mapa');
+            const ubicaciones = {
+                Arequipa: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30617.881295402472!2d-71.53900444507597!3d-16.412878909270194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91424b1a6bcfafb7%3A0xe15fe4683a1d43c0!2sMall%20Aventura%20Arequipa!5e0!3m2!1ses!2spe!4v1732342929065!5m2!1ses!2spe",
+                Cusco: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7757.512737845818!2d-71.88354598608088!3d-13.550531560503119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916e7e8d81937779%3A0xbfaf8bf1dac0f700!2sPolideportivo%20CAJONAHUAYLLA!5e0!3m2!1ses!2spe!4v1732343657845!5m2!1ses!2spe",
+                Lima: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62420.51827239999!2d-77.04268552575367!3d-12.092810014711455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c927e7a5a243%3A0x4060958ca1b9c59!2sConstructora%20e%20Inmobiliaria%20Coramsa%20Eirl%20-%20Lima!5e0!3m2!1ses!2spe!4v1732343701807!5m2!1ses!2spe",
+                Trujillo: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63196.154896592125!2d-79.07586234750977!3d-8.125932399306834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3d837dae4849%3A0xeb74ec7b04e11297!2sHotel%20Costa%20del%20Sol%20Trujillo%20Centro!5e0!3m2!1ses!2spe!4v1732342993763!5m2!1ses!2spe",
+                Piura: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31788.102831112818!2d-80.69541689682696!3d-5.181740977026876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904a1b1b34ed887b%3A0x470e409d1b4cb3c8!2sHB%20Precio%20Uno%20Piura%20Grau!5e0!3m2!1ses!2spe!4v1732343024940!5m2!1ses!2spe",
+                Chiclayo: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.9212822592326!2d-79.84813927886765!3d-6.7794348852930435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904cef2442709837%3A0xf0839a7e7e56fa2!2sMetro%20Grau!5e0!3m2!1ses!2spe!4v1732343056958!5m2!1ses!2spe"
+            };
+            mapa.src = ubicaciones[ubicacion];
+        }
+    </script>
+    
+    <div class="tabla-responsive">
+        <table class="tabla-sucursales">
+            <thead>
+                <tr>
+                    <th>SUCURSAL</th>
+                    <th>DIRECCION</th>
+                    <th>TELEFONO</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Sucursal Arequipa</td><td>Avenida Lima 123, Arequipa</td><td>123-456</td></tr>
+                <tr><td>Sucursal Cusco</td><td>Calle San Pedro 456, Cusco</td><td>654-321</td></tr>
+                <tr><td>Sucursal Lima</td><td>Av. Javier Prado 789, Lima</td><td>987-654</td></tr>
+                <tr><td>Sucursal Trujillo</td><td>Calle Bolívar 321, Trujillo</td><td>321-987</td></tr>
+                <tr><td>Sucursal Piura</td><td>Av. Sánchez Cerro 654, Piura</td><td>456-789</td></tr>
+                <tr><td>Sucursal Chiclayo</td><td>Calle 28 de julio 987, Chiclayo</td><td>321-654</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+    <!-- pie de pagina -->
+<!-- Sección de contacto en el footer -->
+<footer id="contacto">
+    <div class="contacto-info">
+        <h3>Contacto</h3>
+        <div class="contacto-column">
+            <h4>Ventas por Mayor</h4>
+            <ul>
+                <li>
+                    <a href="https://wa.me/1234567890" target="_blank">
+                        <img src="ICO/2.png" alt="Whatsapp">WhatsApp
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:ventas@construyeUtp.com">
+                        ventas@construyeUtp.com
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:+51123456789">
+                        +51 123456789
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="contacto-column">
+            <h4>Soporte</h4>
+            <ul>
+                <li>
+                    <a href="https://wa.me/0987654321" target="_blank">
+                       <img src="ICO/2.png" alt="Whatsapp">WhatsApp
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:soporte@construyeUtp.com">
+                        soporte@construyeUtp.com
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="redes-sociales">
+        <a href="https://www.facebook.com/ConstruyeUtp" target="_blank"><img src="ICO/1.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/ConstruyeUtp" target="_blank"><img src="ICO/3.png" alt="Instagram"></a>
+    </div>
+</footer>
+
+</body>
+
+</html>
