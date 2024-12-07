@@ -1,0 +1,79 @@
+/* quitar margenes y rellenos por defecto */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* iframe ocupa toda la pantalla */
+iframe {
+    width: 100%;
+    height: 100%; /* ocupa todo el contenido */
+    border: none;
+}
+
+/* cuadro de descuento flotante */
+#discount-box {
+    width: 100%;
+    height: 8vh; /* de la altura */
+    background-color: rgba(0, 0, 0, 100); /* fondo oscuro con opacidad */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000; /* asegura que este encima de otros elementos */
+}
+
+/* responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    #discount-box {
+        font-size: 1.2rem; /* reduce el tamaño del texto */
+    }
+}
+
+/* estilos para el boton flotante */
+.btn-animated {
+    background-color: #F7E85F;
+    color: black;
+    position: fixed;
+    bottom: 20px; /* posiciona el boton hacia abajo */
+    right: 20px; /* posiciona el boton a la derecha */
+    overflow: hidden;
+    transition: color 0.3s;
+    border-radius: 50px;
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    z-index: 2000; /* asegura que el boton este por encima de otros elementos */
+}
+
+/* efecto al pasar el mouse por encima del boton */
+.btn-animated::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #04AA6D;
+    transition: left 0.3s;
+    z-index: 0;
+}
+
+.btn-animated:hover::after {
+    left: 0;
+}
+
+.btn-animated:hover {
+    color: white;
+}

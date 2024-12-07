@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+}
+
+/* pinguinosss */
+.contenedor-pinguino {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.pinguinos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pinguino {
+    width: 10%;
+    transition: transform 0.3s ease;
+}
+
+.pinguino:hover {
+    transform: scale(1.1);
+}
+
+/* animaciones */
+@keyframes repetir {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+@keyframes fotograma {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+}
+
+@keyframes deslizar {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(100px); }
+}
+
+.pinguino-repetir { animation: repetir 2s infinite; }
+.pinguino-fotograma { animation: fotograma 2s infinite; }
+.pinguino-deslizar { animation: deslizar 3s infinite; }
+
+/* Cuadro de Trabajadores */
+.cuadro-trabajadores {
+    max-width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.GridConAreas {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+}
+
+.GridConAreas .elemento-grid {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.GridConAreas .cabecera {
+    background: #000;
+    color: #fff;
+}
+
+.GridConAreas .menu {
+    background: #33B5FF;
+    color: #fff;
+}
+
+.GridConAreas .principal {
+    background: #75FF35;
+    color: #000;
+}
+
+.GridConAreas .pie {
+    background: #000;
+    color: #fff;
+}
+
+/* Monedas */
+.animacion-monedas {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.monedas {
+    width: 10%;
+    margin: 5px;
+    transition: transform 0.3s ease;
+}
+
+.monedas:hover {
+    transform: rotate(360deg);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .pinguino { width: 20%; }
+    .GridConAreas {
+        grid-template-columns: 1fr;
+    }
+    .cuadro-trabajadores {
+        width: 90%;
+    }
+}
+
+
+
+
+/* estilos para el boton flotante */
+.btn-animated {
+    background-color: #F7E85F;
+    color: black;
+    position: fixed;
+    bottom: 20px; /* posiciona el boton hacia abajo */
+    right: 20px; /* posiciona el boton a la derecha */
+    overflow: hidden;
+    transition: color 0.3s;
+    border-radius: 50px;
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    z-index: 2000; /* asegura que el boton este por encima de otros elementos */
+}
+
+/* efecto al pasar el mouse por encima del boton */
+.btn-animated::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #04AA6D;
+    transition: left 0.3s;
+    z-index: 0;
+}
+
+.btn-animated:hover::after {
+    left: 0;
+}
+
+.btn-animated:hover {
+    color: white;
+}

@@ -1,0 +1,489 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; 
+    color: #333; /* color de texto */
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* encabezado y barra de navegacion */
+header {
+    background-color: #003366; /* fondo oscuroo encabezado */
+    color: white;
+    padding: 0;
+    text-align: center;
+    position: fixed; /* fijo en la parte superior */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 2px -2px gray; /* sombra  */
+}
+
+
+
+header h1 {
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* Fuente moderna y elegante */
+    font-size: 2.5rem; /* Tamaño de letra */
+    font-weight: 700; /* Grosor de la letra */
+    color: #FFFFFF; /* Color oscuro y profesional */
+    text-align: center; /* Centrar el texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+}
+
+
+nav ul {
+    list-style: none; /* elimina los puntos de la lista */
+    padding: 0;
+    margin: 0;
+    display: flex; /* alinea los elementos en una fila */
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px; /* espacio entre los elementos del menu */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* subrayado al pasar el cursor */
+}
+
+/* seccion de inicio */
+section {
+    padding: 80px 20px; /* espaciado evita que contenido quede debajo del header */
+    background-color: white;
+}
+
+section#inicio {
+    text-align: center;
+    background-color: #F4F4E0; /* fondo diferente para destacar */
+    padding-top: 120px; /* aumenta el padding superior por el header fijo */
+}
+
+section#ubicaciones {
+    background-color: #F4F4E0; /* fondo diferente para destacar */}
+
+
+section#inicio h2 {
+    color: #003366;
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap; /* para que los productos se acomoden en varias filas si es necesario */
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.producto {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 8px; /* bordes redondeados */
+    transition: transform 0.3s ease; /* transición para el efecto hover */
+}
+
+.producto:hover {
+    transform: scale(1.05); /* efecto zoom al pasar el cursor */
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* estilo de la seccion de servicios */
+section#servicios ul {
+    list-style: none;
+    padding: 0;
+}
+
+section#servicios li {
+    background-color: #f1f1f1;
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 4px solid #003366; /* barra lateral de color */
+}
+
+
+/* estilo del video */
+section#video {
+    background-color: #003366;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+section#video video {
+    max-width: 100%; /* hacemos que el video sea responsivo */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* sombra para dar profundidad */
+}
+
+/* estilo de la tabla de ubicaciones */
+.tabla-responsive {
+    overflow-x: auto; /* permite el desplazamiento horizontal en pantallas pequeñas */
+    margin-top: 20px;
+    
+}
+
+ #botones-ubicaciones button:hover {
+            background-color: #0056b3;
+}
+ #botones-ubicaciones {
+            margin: 20px 0;
+}
+
+#botones-ubicaciones button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.tabla-sucursales {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.tabla-sucursales th, .tabla-sucursales td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.tabla-sucursales th {
+    background-color: #003366;
+    color: white;
+}
+
+/* estilos para formulario de contacto */
+form {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    background-color: #003366;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #005580;
+}
+
+/* estilos del footer */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* alinea el menú verticalmente en pantallas pequeñas */
+    }
+
+    .productos {
+        justify-content: center;
+    }
+
+    .producto {
+        width: 90%;
+    }
+
+    section#inicio {
+        padding-top: 150px; /* ajuste de padding superior en pantallas pequeñas */
+    }
+    .logo {
+        top: 10px; 
+        right: 5px; 
+        max-width: 80px;
+    }
+}
+
+
+
+.logo {
+    position: absolute;
+    top: 0px;
+    right: 0px; 
+    left: 88%;
+    height: 170px;
+    max-width: 100%
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+    }
+    
+    .logo {
+        max-width: 70%; /* Ajuste del tamaño del logo */
+    }
+}
+
+#contador {
+    position: fixed;
+    top: 10px;
+    left: 18px;
+    background-color: #ff0000; /* Fondo rojo */
+    color: #ffffff; /* Texto blanco */
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+.cabecera-img {
+    width: 100%;
+    height: auto; /* Asegura que la altura de la imagen se ajuste proporcionalmente al ancho */
+}
+
+        
+        
+
+h3 {
+    font-family: 'Arial', sans-serif;
+    font-size: 35px; /* Establece el tamaño de la fuente */
+    color: #333333; /* Color de texto oscuro */
+    margin-top: 20px; /* Espaciado arriba */
+    margin-bottom: 10px; /* Espaciado abajo */
+    text-align: center; /* Centra el texto */
+    font-weight: bold; /* Hace el texto en negrita */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+h3:hover {
+    color: #007BFF; /* Cambia el color cuando se pasa el mouse por encima */
+    text-decoration: underline; /* Subraya el texto al pasar el mouse */
+}
+
+
+
+/* Contenedor que contiene el video y el título */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Se ajusta al alto de la ventana del navegador */
+    overflow: hidden;
+}
+
+/* Estilo para el video */
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que el video ocupe todo el contenedor sin distorsionarse */
+}
+
+/* Estilo para el título */
+.titulo-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el título */
+    font-size: 5rem; /* Tamaño grande del título */
+    color: white; /* Color blanco para que resalte sobre el video */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la visibilidad */
+    font-weight: bold; /* Fuente en negrita */
+    z-index: 10; /* Asegura que el título esté encima del video */
+    transition: background-color 0.3s ease; /* Transición para oscurecer */
+}
+
+/* Efecto al pasar el mouse: oscurece ligeramente el título */
+.video-container:hover .titulo-video {
+    background-color: rgba(0, 0, 0, 0.3); /* Añade un fondo semitransparente al pasar el mouse */
+    padding: 10px; /* Añade un pequeño padding para que el texto no quede pegado */
+}
+
+/* Ajustes adicionales para dispositivos más pequeños */
+@media (max-width: 768px) {
+    .titulo-video {
+        font-size: 8vw; /* Aumentar el tamaño en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-video {
+        font-size: 10vw; /* Aumentar aún más el tamaño en pantallas muy pequeñas */
+    }
+}
+
+
+@media (max-width: 768px) {
+    #contador {
+        font-size: 2vw; /* Aumenta el tamaño del texto en pantallas más pequeñas */
+    }
+
+    .logo {
+        max-width: 50%; /* Reducir el tamaño del logo en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    #contador {
+        font-size: 2vw; /* Aumenta aún más el tamaño del texto en pantallas muy pequeñas */
+    }
+
+    .logo {
+        max-width: 40%; /* Reducir aún más el tamaño del logo */
+    }
+}
+
+#contacto {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+#contacto h3 {
+    margin-bottom: 20px;
+}
+
+.contacto-info {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.contacto-column {
+    width: 45%;
+}
+
+.contacto-column h4 {
+    margin-bottom: 10px;
+}
+
+.contacto-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contacto-column li {
+    margin: 10px 0;
+}
+
+.contacto-column a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.contacto-column a:hover {
+    text-decoration: underline;
+}
+
+.contacto-column img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.ubicacion {
+    margin-top: 20px;
+}
+
+.ubicacion a {
+    color: white;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+
+.ubicacion a:hover {
+    text-decoration: underline;
+}
+
+.redes-sociales a {
+    margin: 0 10px;
+}
+
+.redes-sociales img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+
+/* boton animado
+*/
+
+.btn-animated {
+      background-color: #F7E85F;
+      color: black;
+      position: relative;
+      overflow: hidden;
+      transition: color 0.3s;
+      border-radius: 50px;
+      
+      display: inline-block;
+      font-size: 20px;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 15px;
+      text-transform: uppercase;
+    }
+    .btn-animated::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: #04AA6D;
+      transition: left 0.3s;
+      z-index: 0;
+    }
+    .btn-animated:hover::after {
+      left: 0;
+    }
+    .btn-animated:hover {
+      color: white;
+    }

@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+/* video de fondo */
+#video-background {
+        position: fixed; /* fija el video en la pantalla */
+        top: 0;
+        left: 0;
+        width: 100%; /* ocupa todo el ancho */
+        height: 100%; /* ocupa toda la altura */
+        object-fit: cover; /* asegura que el video cubra todo el área sin distorsionarse */
+        z-index: -1; /* coloca el video detrás del contenido */
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+button:hover {
+    background-color: #45a049;
+}
+.note {
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+}
+.hidden {
+    display: none;
+}
+/* estilo para el cuadro explicativo */
+.explanation-box {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.explanation-box h2 {
+    font-size: 18px;
+    color: #333;
+}
+.explanation-box p {
+    font-size: 14px;
+    color: #555;
+}
+
