@@ -1,0 +1,23 @@
+[
+ {"precio": 278, "id": 1, "title": "Equipo Bosh", "thumbnailUrl": "imgs/1.jpg"},
+  {"precio": 175, "id": 2, "title": "Caja Herramienta", "thumbnailUrl": "imgs/2.jpg"},
+  {"precio": 153, "id": 3, "title": "Reloj Chamba 1", "thumbnailUrl": "imgs/3.jpg"},
+  {"precio": 169, "id": 4, "title": "Pack desatornillador 1", "thumbnailUrl": "imgs/4.jpg"},
+  {"precio": 117, "id": 5, "title": "Pack Desatornillador 2", "thumbnailUrl": "imgs/5.jpg"},
+  {"precio": 174, "id": 6, "title": "Pack Desatornillador 3", "thumbnailUrl": "imgs/6.jpg"},
+  {"precio": 283, "id": 7, "title": "Limadora PRO", "thumbnailUrl": "imgs/7.jpg"},
+  {"precio": 300, "id": 8, "title": "Pack Herramientas", "thumbnailUrl": "imgs/8.jpg"},
+  {"precio": 138, "id": 9, "title": "Maleta PRO 1", "thumbnailUrl": "imgs/9.jpg"},
+  {"precio": 191, "id": 10, "title": "Maleta PRO 2", "thumbnailUrl": "imgs/10.jpg"},
+  {"precio": 131, "id": 11, "title": "Parlante Chamba 1", "thumbnailUrl": "imgs/11.jpg"},
+  {"precio": 152, "id": 12, "title": "Parlante Chamba 2", "thumbnailUrl": "imgs/12.jpg"},
+  {"precio": 331, "id": 13, "title": "Audifonos Resistentes", "thumbnailUrl": "imgs/13.jpg"},
+  {"precio": 383, "id": 14, "title": "Taladro PROo", "thumbnailUrl": "imgs/14.jpg"},
+  {"precio": 85, "id": 15, "title": "Reloj Chamba 2", "thumbnailUrl": "imgs/15.jpg"},
+  {"precio": 366, "id": 16, "title": "Alexa 1", "thumbnailUrl": "imgs/16.jpg"},
+  {"precio": 77, "id": 17, "title": "Alexa 2", "thumbnailUrl": "imgs/17.jpg"},
+  {"precio": 373, "id": 18, "title": "Control Universal", "thumbnailUrl": "imgs/18.jpg"},
+  {"precio": 188, "id": 19, "title": "Tablet Anti-Golpes", "thumbnailUrl": "imgs/19.jpg"},
+  {"precio": 336, "id": 20, "title": "Laptop Anti-Golpes", "thumbnailUrl": "imgs/20.jpg"},
+  {"precio": 291, "id": 21, "title": "Alexa 3", "thumbnailUrl": "imgs/21.jpg"}
+]

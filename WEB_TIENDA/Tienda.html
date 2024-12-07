@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tienda</title>
+	<!-- vincula el archivo de estilo de bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	    <link rel="icon" type="image/png" sizes="32x32" href="../ICO/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="../ICO/favicon-16x16.png">
+            <link rel="stylesheet" href="style_tienda.css">
+</head>
+<body>
+    <!-- Cristopher Cabrera Eguia -->
+    
+    <a href="../index.html">
+        <button class="btn-animated">Menú principal</button>
+</a>
+
+	<!-- video de fondo  -->
+	<video id="video-background" autoplay muted loop>
+		<source src="../MP4/carrito.mp4" type="video/mp4">
+		error
+	</video>
+
+	<div class="container">
+		<h1>Carrito para el engreido de la casa 🏠</h1>
+		<hr>
+		<table class="table">
+			<thead>
+			  <tr>
+				<th scope="col">#</th>
+				<th scope="col">item</th>
+				<th scope="col">cantidad</th>
+				<th scope="col">acción</th>
+				<th scope="col">total</th>
+			  </tr>
+			</thead>
+			<tbody id="items"></tbody>
+			<tfoot>
+			  <tr id="footer">
+				<th scope="row" colspan="5">carrito vacío - comience a comprar!</th>
+			  </tr>
+			</tfoot>
+		  </table>
+		<div class="row" id="cards"></div>
+                
+	</div>
+    
+	<!-- botón "Pagar" -->
+        <template id="template-footer">
+            <th scope="row" colspan="2">total productos</th>
+            <td>10</td>
+            <td>
+                <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+                    vaciar todo
+                </button>
+            </td>
+            <td class="font-weight-bold">$ <span>5000</span></td>
+            <td>
+                <!-- Botón para redirigir a la página de pago -->
+                <a href="pago.html" class="btn btn-success">Pagar</a>
+            </td>
+        </template>
+
+        
+    
+    <!-- plantilla para el carrito -->
+    <template id="template-carrito">
+      <tr>
+        <th scope="row">id</th>
+        <td>café</td>
+        <td>1</td>
+        <td>
+            <button class="btn btn-info btn-sm">
+                +
+            </button>
+            <button class="btn btn-danger btn-sm">
+                - 
+            </button>
+        </td>
+        <td>$ <span>500</span></td>
+      </tr>
+    </template>
+
+	<!-- plantilla para la tarjeta de productos -->
+	<template id="template-card">
+		<div class="col-12 mb-2 col-md-4">
+		  <div class="card">
+			  <img src="" alt="" class="card-img-top">
+			<div class="card-body">
+			  <h5>titulo</h5>
+			  <p>precio</p>
+			  <button class="btn btn-dark">comprar</button>
+			</div>
+		  </div>
+		</div>
+	</template>
+
+<script src="app.js"></script>
+</body>
+</html>
